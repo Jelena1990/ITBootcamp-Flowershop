@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <title>Flower</title>
+    <link href="style.css" rel="stylesheet" />
+    <link
+      rel="shortcut icon"
+      class="logo"
+      type="image/png"
+      href="slike/flower.png"
+    />
+  </head>
+  <body>
+    <header>
+      <!-- navigacija -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img src="slike/logo.png" alt="logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#gallery">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#order">Order</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <img src="slike/email.png" id="img" />
+            <span id="email">www.flower.com </span>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="dimenzije">
+        <div class="proziran">
+          <h2>Always here for you!</h2>
+          <h2>Free delivery!</h2>
+        </div>
+      </div>
+      <section class="about" id="about">
+        <div class="flex">
+          <img src="slike/mi.jpg" class="nasaSlika" alt="image of us" />
+          <div class="about-text">
+            <div class="line">
+              <h3 class="lineUp">Our story</h3>
+            </div>
+            <p>
+              Our story began a decade ago, when our family decided to turn our
+              love of flowers into a business. We started out with just a small
+              storefront in Nis, but over the years we have grown to become one
+              of the city's most trusted and beloved florists.<br />
+              We take pride in being a part of the community and contributing to
+              its beauty.<br />
+
+              At Floweshop, we believe that every occasion deserves flowers.
+              Whether you're celebrating a special milestone, expressing your
+              love to someone special, or simply brightening up your own day,
+              our skilled florists are here to create arrangements that are as
+              unique and special as you are. <br />
+
+              We also offer a variety of gifts, including candy box, chocolates,
+              champagne, and more, to help you make any occasion even more
+              special. <br />
+              <p class="title">
+                <span class="title-word title-word-1"> Thank</span>
+                <span class="title-word title-word-2">you</span>
+                <span class="title-word title-word-3">for</span>
+                <span class="title-word title-word-4">choosing</span>
+                <span class="title-word title-word-5">Floweshop</span>
+                <span class="title-word title-word-6">for</span>
+                <span class="title-word title-word-7">all</span>
+                <span class="title-word title-word-8">your</span>
+                <span class="title-word title-word-9">floral</span>
+                <span class="title-word title-word-10">needs.</span>
+              </p>
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- galerija -->
+      <section class="galerija" id="gallery">
+        <div class="container-panel">
+          <div class="panel panel-1">
+            <h3>Roses</h3>
+          </div>
+          <div class="panel panel-2">
+            <h3>Lilies</h3>
+          </div>
+          <div class="panel panel-3">
+            <h3>Gerbera</h3>
+          </div>
+          <div class="panel panel-4">
+            <h3>Candy box</h3>
+          </div>
+          <div class="panel panel-5">
+            <h3>Chocolate</h3>
+          </div>
+          <div class="panel panel-6">
+            <h3>Champagne</h3>
+          </div>
+        </div>
+        <span>please click on the picture</span>
+      </section>
+
+      <div class="container" id="order">
+        <form action="google.com" id="forma" method="post">
+          <h3>Choose the flowers:</h3>
+          <input
+            type="number"
+            min="1"
+            step="1"
+            id="ruze"
+            name="ruze"
+            class="inputfield"
+            onkeydown="if(event.key==='.'){event.preventDefault();}"
+            oninput="event.target.value = event.target.value.replace(/[^0-9]*/g,'');"
+            placeholder="150 rsd per flower"
+          />
+          <label for="ruze" class="labeltext"
+            >Roses <img src="ruza.png" width="30" height="30" /></label
+          ><br />
+          <input
+            type="number"
+            min="1"
+            step="1"
+            id="ljiljani"
+            class="inputfield"
+            name="ljiljani"
+            onkeydown="if(event.key==='.'){event.preventDefault();}"
+            oninput="event.target.value = event.target.value.replace(/[^0-9]*/g,'');"
+            placeholder="120 rsd per flower"
+          />
+          <label for="ljiljani" class="labeltext"
+            >Lilies <img src="ljiljan.png" width="30" height="30" /></label
+          ><br />
+          <input
+            type="number"
+            min="1"
+            step="1"
+            id="gerberi"
+            name="gerber"
+            class="inputfield"
+            onkeydown="if(event.key==='.'){event.preventDefault();}"
+            oninput="event.target.value = event.target.value.replace(/[^0-9]*/g,'');"
+            placeholder="70 rsd per flower"
+          />
+          <label for="gerberi" class="labeltext"
+            >Gerbera <img src="gerber.png" width="30" height="30" /></label
+          ><br />
+
+          <h3>Additional gifts:</h3>
+          <input
+            type="checkbox"
+            id="bombonjera"
+            name="bombonjera"
+            value="b"
+          /><span class="tekst">Candy box</span><br />
+          <input type="checkbox" id="cokolada" name="cokolada" value="c" /><span
+            class="tekst"
+            >Chocolate</span
+          ><br />
+          <input
+            type="checkbox"
+            id="sampanjac"
+            name="sampanjac"
+            value="s"
+          /><span class="tekst">Champagne</span><br />
+
+          <h3>Payment:</h3>
+
+          <input
+            type="radio"
+            id="placanje"
+            class="inputfield"
+            name="placanje"
+            value="kes"
+            checked
+          /><span class="tekst">Cash</span><br />
+          <input
+            type="radio"
+            id="placanje"
+            class="inputfield"
+            name="placanje"
+            value="kartica"
+          /><span class="tekst">Card</span><br />
+
+          <input type="button" id="izracunaj" value="Calculate" />
+          <button id="resetuj">Reset</button><br />
+
+          <h3>Your order:</h3>
+          <div id="ruzeCvetovi"></div>
+          <div id="ljiljaniCvetovi"></div>
+          <div id="gerberiCvetovi"></div>
+          <div id="bombonjerapoklon"></div>
+          <br />
+          <div id="cokoladapoklon"></div>
+          <br />
+          <div id="sampanjacpoklon"></div>
+          <br />
+          <div id="cenabezp"></div>
+          <div id="cenasap"></div>
+        </form>
+      </div>
+      <section>
+        <div class="cards">
+          <img src="slike/Group 3.png " width="80px" />
+          <span class="text text1">10 years experience</span>
+        </div>
+        <div class="cards">
+          <img src="slike/Group 4.png " width="80px" />
+          <span class="text">100% safe </span>
+        </div>
+        <div class="cards">
+          <img src="slike/Group 2.png " width="80px" />
+          <span class="text">fast delivery</span>
+        </div>
+        <div class="cards">
+          <img src="slike/Group 1.png" width="80px" />
+          <span class="text">good price</span>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p class="footerp">All rights reserved &copy;</p>
+      <div class="footerdiv">
+        <a href="#"><img src="slike/instagram.png" class="img" /></a>
+        <a href="#"><img src="slike/pinterest.png" class="img" /></a>
+        <a href="#"><img src="slike/facebook.png" class="img" /></a>
+      </div>
+      <a href="https://jelenavasilesku.com/"><p class="footerp">designed by Jelena Vasilesku</p></a>
+    </footer>
+    <!-- bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+

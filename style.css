@@ -1,0 +1,421 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: purple;
+  color: white;
+  font-family: sans-serif;
+}
+.logo {
+  width: 50%;
+}
+.dimenzije {
+  width: 100%;
+  height: 400px;
+  background: url(slike/slika1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.proziran {
+  background-color: white;
+  opacity: 68%;
+  width: 30%;
+  height: 42%;
+  position: absolute;
+  right: 20px;
+  top: 100px;
+  border-radius: 5px;
+}
+
+.about {
+  width: 100%;
+  height: 550px;
+  color: #333;
+  padding-top: 150px;
+}
+.flex {
+  display: flex;
+}
+
+.nasaSlika {
+  height: 280px;
+  margin: 0 80px;
+  border-radius: 5px;
+}
+.about-text {
+  width: 50%;
+}
+
+.about-text h3 {
+  margin-top: -70px;
+  margin-bottom: 60px;
+  color: purple;
+  font-weight: 600;
+  font-style: italic;
+}
+.lineUp {
+  animation: 4s anim-lineUp ease-out infinite;
+}
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+/*galerija*/
+#gallery {
+  height: 350px;
+  position: relative;
+  border-top: 1px solid gray;
+}
+.container-panel {
+  margin-top: 25px;
+  background-color: aliceblue;
+  display: flex;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.panel {
+  background-size: auto 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 40vh;
+  width: 100%;
+  border-radius: 5%;
+  color: #333;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative; /*za h3 roditelj*/
+  transition: flex 0.7s ease-in;
+}
+.panel h3 {
+  font-size: 16px;
+  position: absolute;
+  bottom: 20%;
+  left: 28%;
+  margin: 0;
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 5;
+  border-radius: 50px;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: all 0.3s ease-in 0.4s;
+}
+/* slike*/
+.panel-1 {
+  background-image: url(slike/galerija1.jpg);
+}
+
+.panel-2 {
+  background-image: url(slike/galerija2.jpg);
+}
+
+.panel-3 {
+  background-image: url(slike/galerija3.jpg);
+}
+
+.panel-4 {
+  background-image: url(slike/galerija4.jpg);
+}
+
+.panel-5 {
+  background-image: url(slike/galerija5.jpg);
+}
+
+.panel-6 {
+  background-image: url(slike/galerija6.jpg);
+}
+
+.title-word {
+  animation: color-animation 2s linear infinite;
+  text-align: center;
+}
+
+.title-word-1,
+.title-word-5,
+.title-word-9 {
+  --color-1: #df8453;
+
+  --color-3: #833b3a;
+}
+
+.title-word-2,
+.title-word-6,
+.title-word-10 {
+  --color-1: #dbad4a;
+
+  --color-3: #17494d;
+}
+
+.title-word-3,
+.title-word-7 {
+  --color-1: #80c5bd;
+
+  --color-3: #556967;
+}
+
+.title-word-4,
+.title-word-8 {
+  --color-1: #3d8dae;
+
+  --color-3: #e66c69;
+}
+
+@keyframes color-animation {
+  0% {
+    color: var(--color-1);
+  }
+  /*  */
+  66% {
+    color: var(--color-3);
+  }
+  99% {
+    color: var(--color-3);
+  }
+  100% {
+    color: var(--color-1);
+  }
+}
+#gallery span {
+  display: inline-block;
+  font-size: 14px;
+  color: #333;
+  font-weight: 100;
+  position: absolute;
+  bottom: 5%;
+  left: 45%;
+}
+/***************************************************/
+h2 {
+  padding-top: 10px;
+  color: black;
+  opacity: 100%;
+  text-align: center;
+}
+.p2 {
+  color: #38161a;
+}
+#email {
+  display: inline-block;
+  color: #f06595;
+  font-size: 35px;
+  align-items: center;
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
+#img {
+  margin-bottom: -10px;
+}
+
+section {
+  padding-bottom: 25px;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cards {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: center;
+  text-align: center;
+}
+.text {
+  font-size: 20px;
+  color: black;
+  display: inline-block;
+  margin-left: -10px;
+}
+
+.text1 {
+  margin-left: -30px;
+}
+
+footer {
+  background-color: whitesmoke;
+  display: flex;
+  padding-top: 15px;
+  border-top: 1px solid purple;
+  justify-content: space-around;
+}
+
+footer a {
+  text-decoration: none;
+}
+.footerp {
+  color: purple;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+form {
+  width: 100%;
+  margin-top: 80px;
+  border: 1px solid #f3d9fa;
+  padding: 40px;
+}
+h3 {
+  font-size: 32px;
+  text-align: center;
+}
+input {
+  display: inline-block;
+  width: 50%;
+  background-color: white;
+  padding: 10px 0 10px 0;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+::placeholder {
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-block;
+  padding-left: 25px;
+}
+.labeltext {
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+.field {
+  padding: 5px;
+  margin-right: 0;
+}
+
+.footerdiv {
+  display: flex;
+  align-items: center;
+}
+
+.img {
+  height: 30px;
+  width: 30px;
+  margin-left: 10px;
+}
+
+.container {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#izracunaj,
+#resetuj {
+  width: 100px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #f3d9fa;
+  margin-right: 10px;
+}
+#izracunaj {
+  margin-left: 100px;
+}
+#resetuj {
+  background-color: whitesmoke;
+}
+
+#izracunaj:hover,
+#resetuj:hover {
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.2);
+  font-size: 20px;
+  font-weight: 600;
+  margin-right: -35px;
+}
+
+.tekst {
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: -50px;
+}
+
+.show {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  body{
+/*    background-color: white;
+*/  }
+
+  .container {
+    width: auto;
+  }
+  form {
+    input {
+      width: 55% !important;
+    }
+  }
+
+  input[type="checkbox"] {
+    margin-right: 0px;
+  }
+
+  .about{
+    padding-top: 50px;
+  }
+
+  .about-text {
+    width: 100%;
+  }
+  .about-text h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .nasaSlika {
+      display: none;
+  }
+
+  .image {
+    width: 100%
+  }
+
+  .galerija{
+    display: none;
+  }
+
+  #izracunaj{
+    margin-left: 50px;
+  }
+  #izracunaj, #resetuj{
+    margin-right: 0px;
+  }
+}
+
+@media only screen and (min-width:700px) and (max-width:1000px) {
+  .about{
+    height: 100%;
+  }
+  #gallery{
+    height: 550px;
+  }
+}
